@@ -1,5 +1,6 @@
 package org.ict.mapper;
 
+import org.ict.domain.BoardVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,36 @@ public class BoardMapperTests {
 	
 	// 테스트용 메서드의 이름은 testGetList입니다.
 	// 테스트 코드가 실행될 수 있도록 만들어주세요.
-	@Test
+	//@Test
 	public void testGetList() {
 		// mapper 내부의 getList 메서드를 호출하려면?
 		log.info(mapper.getList());
 	}
+	
+	//@Test
+	public void testinsert() {
+		// 글 입력을 위해서 BoardVO 타입을 매개로 사용함
+		// 따라서 BoardVO를 만들어놓고
+		// setter로 글제목, 글본문, 글쓴이만 저장해둔 채로
+		// mapper.insert(vo);를 호출해서 실행여부를 확인하면 됨
+		// 위 설명을 토대로 아래 vo에 6번글에 대한 제목 본문 글쓴이를 넣고
+		//호출 해준다음 실제로 db에 들어갔는지 확인
+		BoardVO vo = new BoardVO();
+		vo.setContent("test1");
+		vo.setTitle("test1");
+		vo.setWriter("test1");
+
+		//log.info(vo);
+		mapper.insert(vo);
+	}
+	
+	@Test
+	public void testselect() {
+		
+		mapper.select(3L);
+		
+	}
+	
 	
 	
 }
