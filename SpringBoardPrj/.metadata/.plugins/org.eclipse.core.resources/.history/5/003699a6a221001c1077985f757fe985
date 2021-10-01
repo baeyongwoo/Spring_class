@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.rg/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.ict.mapper.ReplyMapper">
+	
+	<insert id="create">
+		<selectKey keyProperty="rno" order="before">
+			SELECT rno.nextval FROM dual
+		</selectKey>
+		INSERT INTO reply_tbl values(#{rno}, #{bno}, #{reply}, #{replyer})
+		
+	</insert>
+	
+	<select id="getList">
+		SELECT * FROM reply_tbl WHERE bno = #{bno} ORDER BY rno DESC
+	</select>
+	
+	<update id="update">
+		UPDATE reply_tbl SET reply = #{reply}, updatedate = sysdate() WHERE rno=#{rno}
+	
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM reply_tbl WHERE rno= #{rno}
+	</delete>
+	
+</mapper>
+
+
+

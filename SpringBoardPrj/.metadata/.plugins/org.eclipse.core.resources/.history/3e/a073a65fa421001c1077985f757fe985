@@ -1,0 +1,37 @@
+package org.ict.service;
+
+import java.util.List;
+
+import org.ict.domain.ReplyVO;
+import org.ict.mapper.ReplyMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ReplyServiceImpl implements ReplyService{
+
+	@Autowired
+	ReplyMapper rm;
+	
+	@Override
+	public void addReply(ReplyVO vo) {
+			rm.create(vo);
+	}
+
+	@Override
+	public List<ReplyVO> listReply(int bno) {
+		return null;
+	}
+
+	@Override
+	public void modifyReply(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeReply(int rno) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

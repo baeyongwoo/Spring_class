@@ -1,0 +1,5 @@
+package org.ict.domain;
+
+public class ReplyVO {
+
+}

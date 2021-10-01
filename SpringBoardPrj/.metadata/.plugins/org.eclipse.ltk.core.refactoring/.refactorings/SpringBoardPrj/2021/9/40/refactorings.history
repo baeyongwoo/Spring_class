@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BoardMapper.xml&apos; to &apos;SpringBoardPrj/src/main/java/org.ict.mapper&apos;&#x0D;&#x0A;- Original project: &apos;SpringBoardPrj&apos;&#x0D;&#x0A;- Destination element: &apos;SpringBoardPrj/src/main/java/org.ict.mapper&apos;&#x0D;&#x0A;- Original element: &apos;BoardMapper.xml&apos;" description="Copy file" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.ict.mapper" element1="src/main/java/org/ict/mapper/BoardMapper.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1632972944325" units="0" version="1.0"/>
+</session>
